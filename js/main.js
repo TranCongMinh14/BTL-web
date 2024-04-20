@@ -140,19 +140,20 @@ function showProduct() {
   show_detailProduct();
 }
 
-
-//Hiển thị giỏ hàng
+// //Hiển thị giỏ hàng
 let cart = localStorage.getItem('carts');
+cart = [];
 // Kiểm tra xem cart có tồn tại trong localStorage không
 if (!cart) {
   // Nếu không, khởi tạo một mảng rỗng và lưu vào localStorage
   cart = [];
   localStorage.setItem('carts', JSON.stringify(cart));
-} else {
-  // Nếu có, phân tích chuỗi JSON thành một mảng để sử dụng
-  cart = JSON.parse(carts);
 }
-
+// } else {
+//   // Nếu có, phân tích chuỗi JSON thành một mảng để sử dụng
+//   cart = JSON.parse(carts);
+// }
+// let cart = [];
 let sttGH = 1;
 // Cập nhật bộ chọn để phù hợp với lớp nút mới
 const buttons = document.querySelectorAll('.btnThemGioHang');
